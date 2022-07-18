@@ -1,0 +1,38 @@
+.card{
+  position: relative;
+  background-color: white;
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--Dark-Violet);
+  height: 80px;
+  width: 80px;
+  top: -35px;
+  left: 2rem;
+}
+
+.card > h2{
+  color: var(--Dark-Violet);
+  font-weight: 700;
+}
+
+.card > p{
+  color: var(--Grayish-Violet);
+}
+
+@media only screen and (max-width: 426px){
+  .card{
+    width: 90%;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+  }
+
+  .circle{
+    left: calc(((100%-2rem)/2) - 40px);
+  }
+}
