@@ -25,7 +25,7 @@ const UrlShortner = () => {
 
     if (e.target[0].value) {
       try {
-        const response = await axios.post("http://localhost:5675/generateUrl", {
+        const response = await axios.post("https://git.heroku.com/url-shortnerr-react.git:5675/generateUrl", {
           url: e.target[0].value
         })
         console.log(response)
