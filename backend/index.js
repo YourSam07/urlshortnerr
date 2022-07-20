@@ -4,7 +4,7 @@ const connectDB = require("./config/dbconnection");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
 const { generateURL, redirect } = require("./urlController");
-const  path = require('path');
+const path = require("path");
 
 connectDB();
 
@@ -17,13 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.post("/generateUrl", generateURL);
 app.get("/:id", redirect);
 
-
-
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/frontend/build")));
+  app.use(express.static(path.join("/frontend/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+    res.sendFile(path.resolve("frontend", "build", "index.html"));
   });
 }
 
