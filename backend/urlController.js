@@ -19,7 +19,7 @@ const generateURL = asyncHandler(async(req, res) =>  {
 
   res.status(200).json({
     ogUrl: req.body.url,
-    shortUrl: `${req.protocol}://${req.get('host')}${req.originalUrl}}${urlDetails.shortenID}`
+    shortUrl: `${req.protocol}://${req.get('host')}${urlDetails.shortenID}`
   });
 })
 
