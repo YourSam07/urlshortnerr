@@ -16,9 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.post("/generateUrl", generateURL);
 app.get("/:id", redirect);
-app.get("/", (req, res) => {
-    res.send("Success")
-});
+
 
 
 if (process.env.NODE_ENV === "production") {
