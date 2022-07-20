@@ -4,7 +4,7 @@ const connectDB = require("./config/dbconnection");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
 const { generateURL, redirect } = require("./urlController");
-const path = require("path");
+const  path = require('path');
 
 connectDB();
 
@@ -18,6 +18,7 @@ app.post("/generateUrl", generateURL);
 app.get("/:id", redirect);
 
 
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
