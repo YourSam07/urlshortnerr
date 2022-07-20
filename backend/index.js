@@ -18,7 +18,7 @@ app.post("/generateUrl", generateURL);
 app.get("/:id", redirect);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/frontend/build")));
+  app.use(express.static("/frontend/build"));
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve("frontend", "build", "index.html"));
