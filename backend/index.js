@@ -19,7 +19,6 @@ app.get("/:id", redirect);
 app.get("/", (req, res) => {
     res.send("Success")
 });
-const __dirname = path.resolve();
 
 
 if (process.env.NODE_ENV === "production") {
