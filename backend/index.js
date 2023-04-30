@@ -5,6 +5,7 @@ const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
 const { generateURL, redirect } = require("./urlController");
 const path = require("path");
+const corsOptions = require("./config/corsOptions.js")
 
 connectDB();
 
